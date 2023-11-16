@@ -1,0 +1,60 @@
+/* .btn-primary {
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(3, 255, 3);
+  } */
+
+.bg {
+    background: linear-gradient(to right, #45f8812c, #0000001a);
+
+    height: 60px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 0;
+    border-right: 0;
+    color: #45f882;
+
+}
+.hero {
+    position: relative;
+  }
+  
+  .line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width as needed */
+    height: 2px; /* Adjust the height as needed */
+    background-color: #000; /* Adjust the color as needed */
+    border-radius: 1px; /* Ensures the line appears smoother */
+  }
+  .slider__area {
+    position: relative;
+    height: 200px; /* Adjust the height as needed */
+  }
+  
+  .slider__area::before,
+  .slider__area::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 350px; /* Adjust the height as needed */
+  }
+  
+  .slider__area::before {
+    left: 0;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    background-color: var(white); /* Adjust the color as needed */
+  }
+  
+  .slider__area::after {
+    right: 0;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    background-color: var(green); /* Adjust the color as needed */
+  }
+    
