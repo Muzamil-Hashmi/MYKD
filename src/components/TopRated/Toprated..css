@@ -1,0 +1,33 @@
+/* Add the following CSS to your styles or in a style tag in your JSX file */
+
+.about__tab-wrap::before,
+.about__tab-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the lines as needed */
+  background: linear-gradient(90deg, transparent 0%, #f1eded 50%, transparent 100%);
+}
+
+.about__tab-wrap::before {
+  top: 0;
+}
+
+.about__tab-wrap::after {
+  bottom: 0;
+}
+
+/* Add the following CSS to your styles or in a style tag in your JSX file */
+
+.border-gradient-t {
+    border-image: linear-gradient(to right, transparent 0%, #38c073 50%, transparent 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-b {
+    border-image: linear-gradient(to right, transparent 0%, #38c073 50%, transparent 100%);
+    border-image-slice: 1;
+  }
+  
