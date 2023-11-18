@@ -1,0 +1,9 @@
+.backgroundStyle {
+    background-image: url('/assets/10054.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-attachment: fixed;
+
+    
+}

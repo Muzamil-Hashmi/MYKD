@@ -10,8 +10,8 @@ const TopRated = () => {
 
             <div className='text-center py-10'> 
 
-            <h1>KNOW ABOUT US</h1>
-                <h1 className='text-5xl my-6'>
+            <h1 className='text-green-500'>KNOW ABOUT US</h1>
+                <h1 className='text-5xl font-bold my-6'>
                     TOP RATED STEAMERS
                 </h1>
 
@@ -92,6 +92,28 @@ const TopRated = () => {
                   </div>
                   
                 </div>
+
+            <div>
+
+            <div className="carousel carousel-center flex justify-around max-w-md p-4 space-x-4 bg-neutral rounded-box">
+  <div className="carousel-item">
+    <img src="/assets/10024.jpg" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="/assets/10025.jpg" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="/assets/10026.jpg" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="/assets/10024.jpg" className="rounded-box" />
+  </div> 
+  <div className="carousel-item">
+    <img src="/assets/10024.jpg" className="rounded-box" />
+  </div> 
+
+</div>
+            </div>
 
             </div>
         </>)

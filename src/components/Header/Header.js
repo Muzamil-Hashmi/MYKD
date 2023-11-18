@@ -2,6 +2,10 @@
 import { navLinks } from '@/utils/navLinks';
 import React, { useState } from 'react';
 import "./Header.css";
+import { CiSearch } from "react-icons/ci";
+import { SlNote } from "react-icons/sl";
+
+
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -11,39 +15,42 @@ const Header = () => {
   };
 
   return (
-    <nav className="p-4">
-      <div className="flex items-center justify-between">
-        <div className="text-white font-bold text-lg">YourLogo</div>
+    <>
+      <div className="flex   justify-between items-center p-6 ">
+        <img src="/assets/10004.png" alt="" className='w-48' />
+        <div className="hidden text-lg font-bold md:flex space-x-16">
+          {
+            navLinks.map((links) => (
+              <React.Fragment key={links.id}>
+                <div className="relative group">
+                  <a
+                    href={links.link}
+                    className="text-white relative inline-block overflow-hidden hover:text-green-500 active:text-green-500"
+                  >
+                    {links.name}
+                    <span className="slash-line"></span>
+                  </a>
+                  {links.subNav && (
+                    <div className="hidden absolute z-10 left-0 mt-2 space-y-2 bg-white text-black group-hover:block">
+                      {links.subNav.map((subNav) => (
+                        <a
+                          key={subNav.id}
+                          href={subNav.link}
+                          className="block px-4 py-2 hover:bg-gray-200"
+                        >
+                          {subNav.name}
+                        </a>
+                      ))}
+                      
+                    </div>
+                  )}
+                </div>
+                
+              </React.Fragment>
 
-        <div className="hidden md:flex space-x-4">
-        {
-  navLinks.map((links) => (
-    <React.Fragment key={links.id}>
-      <div className="relative group">
-        <a
-          href={links.link}
-          className="text-white relative inline-block overflow-hidden hover:text-green-500 active:text-green-500"
-        >
-          {links.name}
-          <span className="slash-line"></span>
-        </a>
-        {links.subNav && (
-          <div className="hidden absolute z-10 left-0 mt-2 space-y-2 bg-white text-black group-hover:block">
-            {links.subNav.map((subNav) => (
-              <a
-                key={subNav.id}
-                href={subNav.link}
-                className="block px-4 py-2 hover:bg-gray-200"
-              >
-                {subNav.name}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
-    </React.Fragment>
-  ))
-}
+            ))
+          }
+            <CiSearch className='font-bold' size={30} />
 
         </div>
 
@@ -51,11 +58,21 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <div className="text-white cursor-pointer">
             {/* Add your search icon component here */}
-            <input type="search" name="search" id="" />
           </div>
-          <button className="text-white">Sign In</button>
+          <button className="btn btn-primary relative overflow-hidden p-5" >
+            <img
+              src="/assets/border.svg"
+              alt="Contact us"
+              className="absolute  top-0 left-0 w-full h-full
+                "
+
+            />
+            <span className="relative flex justify-center items-center gap-2 text-lg z-10"> 
+            <SlNote />
+              SING IN</span>
+          </button>
           <div
-            className="text-white cursor-pointer md:show"
+            className="text-white text-4xl cursor-pointer md:show"
             onClick={toggleDrawer}
           >
             ☰
@@ -72,7 +89,7 @@ const Header = () => {
           {/* ... other mobile links */}
         </div>
       )}
-    </nav>
+    </>
   );
 };
 
